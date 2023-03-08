@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'KumbhSans';
+  src: 
+  url('KumbhSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  font-family: 'KumbhSans';
+}
+
+body{
+	background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+	font-weight: 400;
+	justify-content: center;
+	padding-top: 50px;
+	user-select: none;
+	background-repeat: no-repeat;
+	font:  12px;
+}
+
+.house{
+	margin-left:  auto;
+	margin-right:  auto;
+	background:  white;
+	border-radius: 20px 20px;
+	display: flex;
+}
+
+.room1{
+	border-radius:20px 0 0  20px ;
+}
+.layer1{
+	overflow-x: hidden;
+}
+
+.room2{
+	float : left;
+	border-radius:0 20px 20px 0;
+	background:  white;
+	text-align: left;
+}
+.mid-room{
+	text-align: center;
+}
+
+.faq-section{
+	margin-top: 55px;
+	padding-right:  55px;
+	list-style: none;
+}
+.head{
+	font-weight: bolder
+	margin-bottom: 20px;
+}
+.question-tab{
+	padding:  20px;
+	padding-left: 0;
+	border-top: solid 1px whitesmoke;
+	border-bottom: solid 1px hsl(240, 5%, 91%);
+}
+label{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+label:hover{
+	color: hsl(14, 88%, 65%);
+}
+input {
+	display:  none;
+}
+input:checked ~ label {
+	font-weight: bolder;
+}
+input:checked ~ label > .arrow{
+	transform: rotate(180deg);
+}
+.hidden-div{
+	display:  none;
+}
+
+
+input:checked ~ .hidden-div{
+	display: block;
+	margin-top:  10px;
+}
+.arrow{
+	object-fit: contain;
+	display: inline-block;
+}
+input:checked  .arrow{
+	display: none;
+}
+
+.no-border-top{
+	border-top: none;
+}
+@media (max-width: 1440px){
+	.house{
+	 	height: auto;
+		width: 880px;
+		margin-bottom: 50px;
+	}
+	.room1{
+		float : left;
+		background-image: url("images/bg-pattern-desktop.svg");
+		background-position:  -585px -290px;
+		background-repeat: no-repeat;
+		width: 54%;
+	}
+	.layer1-image{
+	transform: translateX(-89px);
+	margin-top: 75px; 
+
+	}
+	.layer2{
+		position: absolute;
+		top: 259px;
+		transform: translateX(-95px);
+	}
+	.room2{
+		width: 46%;
+		padding:0 20px 10px 20px;
+	}
+	.mb-small{
+		margin-bottom: 90px;
+	}
+	input:checked ~ .mb-small{
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 776px){
+	.mid-room{
+		display:  none;
+	}
+}
+@media (max-width: 776px) {
+	
+	.house{
+		margin-top: 85px;
+		width: 300px;
+		height: auto;
+	}
+	.room1{
+		display: none;
+	}
+	
+	.room2{
+		width:  300px;
+		margin-top:  0px;
+		border-radius: 20px 20px 20px 20px;
+	}
+	.head{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	.mid-room{
+		display:  all;
+		background-image: url("images/bg-pattern-mobile.svg");
+		background-position:  top;
+		background-repeat: no-repeat;
+		height: 120px;
+	}
+	.layer-small{
+		padding-bottom: 0;
+		margin-bottom:  0;
+	}
+	.small-image{
+		padding-bottom: 0;
+		margin-bottom:  0;
+	}
+	.small-image{
+		transform: translateY(-120px);
+	}
+	.faq-section{
+		padding-right: 0;
+		padding-top: 0;
+		margin-top:  0;
+	}
+	.question-tab{
+		padding-right:  15px;
+		padding-left:  0px;
+		padding-bottom:  17px;
+		padding-top:  17px;
+	}
+	label:after{
+		right: 0px;
+	}
+	.mb-small{
+		margin-bottom: 38px;
+	}
+}
+
+#attribution { font-size: 11px; text-align: center; bottom: 0;}
+#attribution a { color: hsl(228, 45%, 44%); }
